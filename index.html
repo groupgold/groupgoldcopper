@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Gold</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+            background-color: black;
+        }
+
+        /* Video header styling */
+        header {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 7;
+            right: 0;
+            text-align: center;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover and active link styles */
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #ff6700;
+            border-radius: 5px;
+        }
+
+        /* About Us section styles */
+        #about {
+            padding: 80px 0;
+            background-color:black;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff6700;
+            
+        }
+
+        /* Paragraph styling for first section */
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            letter-spacing: 0.5px; /* Slightly increases spacing for better readability */
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Styling for the Our Experience section */
+        .experience-text {
+            font-size: 20px;
+            font-weight: lighter; /* Makes the font lighter than About Us */
+            margin-bottom: 20px;
+            color: rgb(248, 248, 253);
+        }
+
+        .experience-list-container {
+            position: relative;
+            height: 200px; /* Adjust height for the list container */
+            overflow: hidden;
+        }
+
+        .experience-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            transition: top 0.5s ease; /* Smooth sliding transition */
+        }
+
+        .experience-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #ff6700;
+        }
+
+        .experience-list img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        /* Adjust carousel size */
+        .carousel-item img {
+            max-width: 100%;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+        }
+
+        /* Services section styles */
+        #services {
+            padding: 80px 0;
+            background-color: black;
+            color: #ff6700;
+        }
+
+        /* تعديل على الخدمة */
+        .service-card {
+            transition: transform 0.3s ease;
+            border: 3px solid #ff6700;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card img {
+            height: 300px;
+            object-fit: cover;
+            background-color: black;
+            border-bottom: 3px solid #ff6700;
+        }
+
+        .service-card h5 {
+            font-size: 24px;
+            margin-top: 15px;
+            color: white;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="lg.jpg">
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- About Us Section -->
+     <section id="about" class="container">
+        <div class="row">
+            <!-- Text Section -->
+            <div class="col-lg-6 about-text">
+                <h2>About Us</h2>
+                <p>
+                    Dear Sir/Madam, <br><br>
+                    Let me introduce our company, Group Gold, which specializes in mining and the purchase and sale of minerals. With many years of experience in this strategic sector, we position ourselves as a key player in the natural resources industry in Morocco.
+                </p>
+            </div>
+
+           <!-- Carousel Section -->
+<div class="col-lg-6">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="work1.jpg" class="d-block mx-auto rounded-circle" alt="Work 1" style="height: 300px; width: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="work2.jpg" class="d-block mx-auto rounded-circle" alt="Work 2" style="height: 300px; width: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="work3.jpg" class="d-block mx-auto rounded-circle" alt="Work 3" style="height: 300px; width: 300px; object-fit: cover;">
+            </div>
+
+            <div class="carousel-item">
+                <img src="work6.jpg" class="d-block mx-auto rounded-circle" alt="Work 6" style="height: 300px; width: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="work7.jpg" class="d-block mx-auto rounded-circle" alt="Work 7" style="height: 300px; width: 300px; object-fit: cover;">
+            </div>
+            <div class="carousel-item">
+                <img src="work8.jpg" class="d-block mx-auto rounded-circle" alt="Work 8" style="height: 300px; width: 300px; object-fit: cover;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+        <!-- Our Experience Section -->
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <h3 class="experience-text">Our Expertise:</h3>
+                <p class="experience-text">
+                    We are committed to extracting and marketing quality minerals while respecting the environmental and social standards in force. Our expertise covers various types of minerals, including:
+                </p>
+            </div>
+            <div class="col-lg-6 experience-list-container">
+                <ul class="experience-list">
+                    <li><img src="iron.jpg" alt="Iron"> Iron</li>
+                    <li><img src="copper.jpg" alt="Copper"> Copper</li>
+                    <li><img src="zinc.jpg" alt="Zinc"> Zinc</li>
+                    <li><img src="lead.jpg" alt="Lead"> Lead</li>
+                    <li><img src="precious.jpg" alt="Precious Minerals"> Other precious minerals</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card service-card">
+                    <img src="exploration.jpg" class="card-img-top" alt="Exploration">
+                    <div class="card-body">
+                        <h5 class="card-title">Exploration and Extraction</h5>
+                        <p class="card-text">We have a qualified team and state-of-the-art equipment to ensure efficient and safe operations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card service-card">
+                    <img src="trading.jpg" class="card-img-top" alt="Trading">
+                    <div class="card-body">
+                        <h5 class="card-title">International Trading</h5>
+                        <p class="card-text">Thanks to our global network, we export high-quality minerals to international markets, ensuring sustainable and reliable partnerships.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card service-card">
+                    <img src="analysis.jpg" class="card-img-top" alt="Analysis">
+                    <div class="card-body">
+                        <h5 class="card-title">Analysis and Certification</h5>
+                        <p class="card-text">In collaboration with accredited laboratories, we provide rigorous analysis of samples to ensure product quality and compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Contact Us Section -->
+<section id="contact" class="container">
+    <h2 class="text-center mb-5" style="color: #ff6700;">Contact Us</h2>
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="access_key" value="a670dedb-d08e-4877-bb23-4e738317d9b3">
+                
+                <!-- Name input -->
+                <div class="form-group mb-4">
+                    <label for="name" style="color: #ff6700; font-weight: bold;">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Company name input -->
+                <div class="form-group mb-4">
+                    <label for="company" style="color: #ff6700; font-weight: bold;">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-control" placeholder="Enter your company name">
+                </div>
+
+                <!-- Email input -->
+                <div class="form-group mb-4">
+                    <label for="email" style="color: #ff6700; font-weight: bold;">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Telephone input -->
+                <div class="form-group mb-4">
+                    <label for="phone" style="color: #ff6700; font-weight: bold;">Telephone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number">
+                </div>
+
+                <!-- Message textarea -->
+                <div class="form-group mb-4">
+                    <label for="message" style="color: #ff6700; font-weight: bold;">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg" style="background-color: #ff6700; color: white;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="text-center text-white" style="background-color: black; padding: 20px;">
+    <div class="container">
+        <!-- Social media icons -->
+        <div class="mb-4">
+            <a href="https://www.facebook.com" class="text-white me-4">
+                <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+            </a>
+            <a href="https://www.instagram.com/groupgold_officiel/profilecard/?igsh=MThkNmh5YXZqZXJ2bg==" class="text-white me-4">
+                <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/groupgold-copper-lead-zinc-870b88334?trk=universal-search-cluster" class="text-white me-4">
+                <i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+            </a>
+            <a href="https://wa.me/212626540868" class="text-white">
+                <i class="bi bi-whatsapp" style="font-size: 2rem;"></i>
+            </a>
+        </div>
+        <!-- Footer Text -->
+        <p>&copy; 2024 Group Gold. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script>
+    let list = document.querySelector('.experience-list');
+    let listHeight = document.querySelector('.experience-list-container').offsetHeight;
+    let listItems = document.querySelectorAll('.experience-list li');
+    let totalHeight = 0;
+
+    listItems.forEach(item => {
+        totalHeight += item.offsetHeight;
+    });
+
+    let scrollPosition = 0;
+    let direction = 1; // 1 for down, -1 for up
+
+    function slideList() {
+        scrollPosition += direction * listItems[0].offsetHeight;
+
+        if (scrollPosition >= totalHeight - listHeight || scrollPosition <= 0) {
+            direction *= -1;
+        }
+
+        list.style.top = -scrollPosition + 'px';
+    }
+
+    setInterval(slideList, 2000); // Change slide every 2 seconds
+</script>
+</body>
+</html>
